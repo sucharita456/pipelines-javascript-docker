@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sucharitapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sucharitapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sucharitapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sucharitapipelinesjavascriptdocker 
+          image: mycontainerregistry089354.azurecr.io/sucharitapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
